@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* Theme A · Clean Ledger */
+:root {
+  --bg: #ffffff;
+  --surface-2: #f4f5f7;
+  --line: #e6e8ec;
+  --fg: #0b0d12;
+  --muted: #5d6370;
+  --accent: #2448d8;
+  --accent-soft: #e8ecfb;
+  --ok: #0f7a3d;
+  --ok-soft: #e3f5ea;
+  --bad: #c42b1c;
+  --bad-soft: #fdecea;
+  --warn: #a15c07;
+  --warn-soft: #fdf3e0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0d12;
+    --surface-2: #171b23;
+    --line: #232833;
+    --fg: #eceef2;
+    --muted: #9097a4;
+    --accent: #6f8cff;
+    --accent-soft: #1b2447;
+    --ok: #4cc77f;
+    --ok-soft: #12301f;
+    --bad: #f2786b;
+    --bad-soft: #3a1814;
+    --warn: #f0b44c;
+    --warn-soft: #2f2410;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif; /* set by geist/font */
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 14px;
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
